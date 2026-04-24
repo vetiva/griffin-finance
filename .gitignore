@@ -30,6 +30,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local IDE and deployment artifacts
+.vs/
+App_Data/PublishProfiles/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

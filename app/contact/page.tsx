@@ -45,10 +45,17 @@ export default function Contact() {
       // Optional: Open email client as fallback
       // window.location.href = mailtoLink
       
-    } catch (error) {
+    } catch (error: unknown) {
       // Error handling
+      const fallbackMessage =
+        'Sorry, there was an error sending your message. Please try again or contact us directly at info@griffin-finance.com'
+      const errorMessage =
+        error instanceof Error && error.message.trim().length > 0
+          ? error.message
+          : fallbackMessage
+
       setSubmitStatus('error')
-      setSubmitMessage('Sorry, there was an error sending your message. Please try again or contact us directly at info@griffin-finance.com')
+      setSubmitMessage(errorMessage)
       console.error('Form submission error:', error)
     } finally {
       setIsSubmitting(false)

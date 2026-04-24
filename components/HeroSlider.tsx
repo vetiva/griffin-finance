@@ -2,7 +2,7 @@
 
 export default function HeroSlider() {
   // Single slide with dark-skinned African American working on laptop demonstrating finance
-  const image = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
+  const image = '/img/MT5FCoa6.png'
 
   return (
     <div className="relative min-h-[600px] overflow-hidden">
